@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<!--
+	Theory by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Theory by TEMPLATED</title>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="{{url_for('static',filename='assets/css/main.css')}}" />
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="index.html" class="logo">메뉴추천</a>
+					<nav id="nav">
+						<a href="google_map2.html">Map</a>
+						<a href="naver_map.html">Generic</a>
+						<a href="elements.html">Elements</a>
+					</nav>
+					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+				</div>
+			</header>
+
+		<!-- Banner -->
+			<section id="banner">
+				<h1>오늘 뭐먹을까?</h1>
+				<p>쉽고 빠른 맛집 찾기 어플리케이션.</p>
+			</section>
+
+		<!-- One -->
+			<section id="one" class="wrapper">
+				<div class="inner">
+					<form class="form-bot" action="/action" method="POST">
+    					<input id="chat" type="text" placeholder="무엇을 도와드릴까요?" autocomplete="off" name="msg" />
+					</form>
+    					<h3 id="ans" class="align-left">
+        					{% if ans %}
+        					<b>Bot</b>:{{ans}}
+        					<br>
+        					<a href="google_map2.html">지도 검색</a>
+        					{% endif %}
+        				</h3>
+    					<h3 id="info_0" class="align-left">
+        					{% if info_0 %}
+        					<img src={{img_0}}>
+        					<br />
+        					{{info_0}}
+        					{% endif %}
+        				</h3>
+        				<h3 id="info_1" class="align-left">
+        					{% if info_1 %}
+        					<img src={{img_1}}>
+        					<br />
+        					{{info_1}}
+        					{% endif %}
+        				</h3>
+        				<h3 id="info_2" class="align-left">
+        					{% if info_2 %}
+        					<img src={{img_2}}>
+        					<br />
+        					{{info_2}}
+        					{% endif %}
+        				</h3>
+        				<h3 id="info_3" class="align-left">
+        					{% if info_3 %}
+        					<img src={{img_3}}>
+        					<br />
+        					{{info_3}}
+        					{% endif %}
+        				</h3>
+				</div>
+			</section>
+
+		<!-- Two -->
+
+		<!-- Three -->
+			
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<div class="flex">
+						<div class="copyright">
+							&copy; Untitled. Design: <a href="https://templated.co">TEMPLATED</a>. Images: <a href="https://unsplash.com">Unsplash</a>.
+						</div>
+						<ul class="icons">
+							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon fa-linkedin"><span class="label">linkedIn</span></a></li>
+							<li><a href="#" class="icon fa-pinterest-p"><span class="label">Pinterest</span></a></li>
+							<li><a href="#" class="icon fa-vimeo"><span class="label">Vimeo</span></a></li>
+						</ul>
+					</div>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="{{url_for('static',filename='assets/js/jquery.min.js')}}"></script>
+			<script src="{{url_for('static',filename='assets/js/skel.min.js')}}"></script>
+			<script src="{{url_for('static',filename='assets/js/util.js')}}"></script>
+			<script src="{{url_for('static',filename='assets/js/main.js')}}"></script>
+	</body>
+</html>
